@@ -28,14 +28,32 @@ npm run build
 - Copyable campaign JSON, responsive white/blue/charcoal interface and launch-readiness checklist.
 - Automated calculation tests and a test/build GitHub Actions workflow.
 
-## Not implemented (must be completed before client campaigns)
+## Internal launch roadmap
+
+VybeSend is for VybeMedia operators only for the initial pilot. No resale, white-labeling, self-service onboarding, SaaS billing or separate client portal is required. Reassess after at least two months of validated internal operation; no automatic commercialization.
+
+### P0 — Required before live sending
+- Secure operator authentication, server-side authorization, persistent campaign storage and audit history.
+- Approved supplier and ESP contracts, documented audience permissions and reuse limits, verified sender identity and provider acceptance.
+- Recipient-level suppression, unsubscribe, bounce and complaint processing, frequency caps, deduplication and pre-send eligibility checks.
+- Approved creative, manual operator approval, test sends, controlled scheduling, idempotent dispatch and emergency pause.
+- Secure production deployment and end-to-end testing with synthetic or authorized test recipients.
+
+### P1 — Required before selling tracked acquisition outcomes
+- Landing page and form attribution, call tracking with recording consent where applicable, lead deduplication and qualification, reporting by wave.
+- Actual vendor costs and agreed client terms; manual invoicing and operator-generated reports are acceptable initially.
+
+### P2 — After pilot
+- AI-assisted optimization based on measured outcomes; Ghost creative integration if useful; VybeTrax and VybeHubs integrations; Stripe if needed. Existing client reporting channels can substitute for a new portal.
+
+## Outstanding implementation inventory
 - Operator login, persistent database and client-specific authorization.
 - Audience supplier contracts, consent validation, license restrictions and delivery APIs.
 - Mandatory recipient-level opt-outs, complaints, bounces, suppression and frequency caps.
 - Automated AI targeting/optimization, sending queues and scheduled deployments.
 - Ghost email creative or newsletter integration.
 - Real lead tracking, call recording, landing pages, VybeTrax, VybeHubs and Stripe.
-- A production server, deployment URL and a client-visible portal.
+- A secure production server and deployment URL; a separate client-visible portal is deferred.
 
 ## Business rules
 1. **Total email sends are not unique audience reach**. Example: 150,000 unique contacts plus 50,000 eligible repeats equals 200,000 total sends.
